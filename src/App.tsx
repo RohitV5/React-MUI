@@ -1,14 +1,16 @@
-import React from 'react';
-import './App.css';
-import { Button, Typography } from '@mui/material';
+import React from "react";
+import "./App.css";
+import { Button, CssBaseline, ThemeProvider, Typography } from "@mui/material";
+import { theme } from "./themes/Theme";
 
 function App() {
   return (
-    <div className="App">
-        <Button variant='contained'>Hello</Button>
-        <Typography variant='h2'>Hi I am typography</Typography>
-
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+        <Button variant="contained">Hello</Button>
+        <Typography variant="h2">Hi I am typography</Typography>
+      </CssBaseline>
+    </ThemeProvider>
   );
 }
 
